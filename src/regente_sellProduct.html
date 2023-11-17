@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediStore - Regente</title>
+    <link rel="stylesheet" href="./src/assets/styles/regente/regente_styles.css">
+</head>
+<body>
+    <header>
+        <img src="ruta_del_logotipo.png" alt="Logotipo de MediStore">
+        <nav>
+            <button>
+                Regresar
+            </button>
+            <h2>
+                Realizar venta
+            </h2>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+            <button type="submit">Escanear código de barras</button>
+        </section>
+        <section>
+            <div #tabla>
+
+            </div>
+        </section>
+        <section>
+            <div>
+                <i class="fas fa-user"></i>
+                <span>Nombre de usuario</span>
+            </div>
+            <div>
+                <button>Modificar</button>
+                <button>Guardar</button>
+                <button>Cancelar</button>
+            </div>
+        </section>
+        <section>
+            <h3>Total de la venta: $<span id="totalVenta">0.00</span></h3>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediStore - Regente</title>
+    <link rel="stylesheet" href="./src/assets/styles/regente/regente_styles.css">
+</head>
+<body>
+    <header>
+        <img src="ruta_del_logotipo.png" alt="Logotipo de MediStore">
+        <nav>
+            <button>
+                Regresar
+            </button>
+            <h2>
+                Ingreso de productos
+            </h2>
+        </nav>
+    </header>
+    <h1>Registro de Ingreso de Lote de Productos</h1>
+    <form>
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="tipo">Tipo de Producto:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="farmaceutico">Farmacéutico</option>
+            <option value="corriente">Producto Corriente</option>
+        </select><br>
+
+        <label for="formula">Fórmula del Producto:</label>
+        <input type="text" id="formula" name="formula" required><br>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required><br>
+
+        <label for="fechaIng">Fecha de Ingreso:</label>
+        <input type="date" id="fechaIng" name="fechaIng" required><br>
+
+        <label for="fechaVen">Fecha de Vencimiento:</label>
+        <input type="date" id="fechaVen" name="fechaVen" required><br>
+
+        <input type="submit" value="Registrar">
+    </form>
+</body>
