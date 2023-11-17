@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar producto</title>
     <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/admin/admin_styles.css">
 </head>
 <body>
     <nav>
@@ -29,7 +30,20 @@
             <li><a href="admin_movimientos.html">Movimientos Realizados</a></li>
         </ul>
     </nav>
-    <h1>EDIT PRODUCT</h1>
+    <h1>Editar Producto</h1>
+
+    <form action="#" method="post">
+        <label for="nom_Comercial">Nombre Comercial:</label>
+        <input type="text" id="nom_Comercial" name="nom_Comercial" required>
+
+        <label for="cant_Product">Cantidad:</label>
+        <input type="text" id="cant_Product" name="cant_Product" required>
+    
+        <label for="price_Product">Precio:</label>
+        <input type="text" id="price_Product" name="price_Product" required>
+    
+        <button type="submit" class="send">Enviar</button>
+        <button type="submit" class="cancel">Cancelar</button>
 
 </body>
 </html>
