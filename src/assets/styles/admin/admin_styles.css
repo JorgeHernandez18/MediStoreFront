@@ -32,5 +32,20 @@ input {
     cursor: pointer;
 }
 button:hover {
-    background-color: #00ff0d;
+    background-color: #3354B6;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 1500px;
+    margin-left: 400px;
+    
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: #5D80E7;
 }
