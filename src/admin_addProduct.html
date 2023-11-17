@@ -30,7 +30,31 @@
                 <li><a href="admin_movimientos.html">Movimientos Realizados</a></li>
             </ul>
         </nav>
-
     <h1>ADD PRODUCT</h1>
+
+    <form action="#" method="post">
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+    
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+    
+        <label for="tipoDocumento">Tipo de Documento:</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+            <option value="cedula">Cédula</option>
+            <option value="pasaporte">Pasaporte</option>
+        </select>
+    
+        <label for="numeroDocumento">Número de Documento:</label>
+        <input type="text" id="numeroDocumento" name="numeroDocumento" required>
+    
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
