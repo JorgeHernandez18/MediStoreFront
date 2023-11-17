@@ -4,6 +4,10 @@ body {
 nav {
     background-color: #333333;
 }
+h1{
+    text-align: center;
+    font-size: 40px;
+}
 ul {
     list-style-type: none;
     margin: 0;
