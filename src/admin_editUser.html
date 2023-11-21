@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="assets/styles/admin/users.css">
+</head>
+
+<body>
+    <div class="encabezado">
+        <h1 style="font-size: 50px;">MediStore</h1>
+        <h3>Editar Usuario</h3>
+    </div>
+    <div class="cuerpo">
+        <div class="user">
+            <h4>Rol: Administrador</h4>
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <div class="formulario">
+            <div class="col-1">
+                <div class="telefono">
+                    <p>Número de teléfono</p>
+                    <input type="number" name="numero-telefono">
+                </div>
+                <div class="rol">
+                    <p>Rol: *</p>
+                    <select name="rol" id="rol" class="select">
+                        <option value="" selected disabled>Rol</option>
+                        <option value="regente">Regente</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="usuario">
+                    <p>Usuario:</p>
+                    <input type="text" name="usuario">
+                </div>
+                <div class="contrasena">
+                    <p>Contraseña:</p>
+                    <input type="password" name="contrasena">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <a href=""><button>Guardar</button></a>
+            <a href=""><button>Cancelar</button></a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9e198b2f7c.js" crossorigin="anonymous">
+    </script>
+</html>
+</body>
