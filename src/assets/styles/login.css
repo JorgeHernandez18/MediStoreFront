@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+.root .img {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 150px;
+    height: 150px;
+}
+.root .img img {
+    width: 150px;
+    height: 150px;
+}
+.root .login {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border: 2px solid grey;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+p {
+    font-size: 25px;
+}
+input[type=text], input[type=password] {
+    border: 1px solid #727272;
+    border-radius: 4px;
+    padding: 10px 50px;
+}
+.select {
+    display:block;
+    padding: 10px 80px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+.root .login .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.root .botones {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 2rem;
+}
+.root .botones button {
+    display: inline-block;
+    color: white;
+    background-color: rgb(1, 195, 146);
+    padding: 10px 8px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
