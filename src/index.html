@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-    <link rel="stylesheet" href="assets/styles/index.css">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="assets/styles/login.css">
 </head>
+
 <body>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
-                    <div class="dropdown-content">
-                        <a href="#">Agregar usuario</a>
-                        <a href="#">Editar usuario</a>
-                        <a href="#">Eliminar usuario</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de productos</a>
-                    <div class="dropdown-content">
-                        <a href="admin_addProduct.html">Añadir producto</a>
-                        <a href="admin_editProduct.html">Editar producto</a>
-                        <a href="admin_deleteProduct.html">Eliminar producto</a>
-                    </div>
-                </li>
-                <li><a href="admin_movimientos.html">Movimientos Realizados</a></li>
-            </ul>
-        </nav>
-        <h1>INICIO</h1>
-        <a href="login.html">Login</a>
+    <div class="root">
+        <div class="img">
+            <img src="../Images/Logo_MediStore.jpg" alt="">
+        </div>
+        <div class="encabezado">
+            <h1 style="font-size: 50px;">Bienvenido a MediStore</h1>
+        </div>
+        <div class="login">
+            <div class="usuario">
+                <p>Usuario:</p>
+                <input type="text" name="usuario" id="user">
+            </div>
+            <div class="contrasena">
+                <p>Contraseña:</p>
+                <input type="password" name="contrasena" id="clave">
+            </div>
+            <div class="rol">
+                <p>Rol:</p>
+                <select name="rol" id="rol" class="select">
+                    <option value="" selected disabled>Rol</option>
+                    <option value="regente">Regente</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-circle-user" style="font-size: 25px;"></i>
+                <i class="fa-solid fa-user" style="font-size: 25px;"></i>
+                <i class="fa-solid fa-users" style="font-size: 25px;"></i>
+            </div>
+        </div>
+        <div class="botones">
+            <a href=""><button id="iniciarSesion">Iniciar sesión</button></a>
+            <a href=""><button>Cancelar</button></a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9e198b2f7c.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
-
