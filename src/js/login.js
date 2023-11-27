@@ -28,7 +28,7 @@ const backendURL = "http://localhost:8095/";
                 console.log("Respuesta del backend:", data);
                 localStorage.setItem('sesion', datos.correo);
                 // Las credenciales son válidas, redirige al usuario a la página principal.
-                window.location.href = "../index.html";
+                window.location.href = "index.html";
             } else {
                 // Las credenciales son inválidas, muestra un mensaje de error.
                 alert("Credenciales incorrectas. Inténtalo de nuevo.");
