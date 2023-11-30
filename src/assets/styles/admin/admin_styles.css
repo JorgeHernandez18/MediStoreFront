@@ -1,6 +1,7 @@
 form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 50px auto;
+    background-image: url("../../../../Images/logo2-Opacity20.png");
 }
 label {
     display: block;
@@ -16,7 +17,7 @@ input, select{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 button:hover {
-    background-color: #3354B6;
+    background-color: rgb(61, 201, 66);
 }
 
 table {
@@ -47,11 +48,12 @@ th:nth-child(3),td:nth-child(3) {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 245px;
+    margin-left: 150px;
+    margin-right: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .cancel {
-    background-color:rgb(62, 213, 208);
+    background-color: rgb(62, 213, 208);
     color: black;
     padding: 10px 15px;
     border: none;

@@ -2,7 +2,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 nav {
-    background-color: rgb(131, 131, 119);
+    background-color: rgb(62, 213, 208);
 }
 h1{
     text-align: center;
@@ -25,7 +25,7 @@ li a, .dropdown-btn {
     text-decoration: none;
 }
 li a:hover, .dropdown:hover .dropdown-btn {
-    background-color: rgb(62, 213, 208);
+    background-color: rgb(131, 131, 119);
 }
 .dropdown {
     display: inline-block;
