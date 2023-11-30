@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuario</title>
-    <link rel="stylesheet" href="assets/styles/admin/users.css">
+    <title>Añadir usuario</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/admin/admin_styles.css">
 </head>
-
 <body>
-    <div class="encabezado">
-        <h1 style="font-size: 50px;">MediStore</h1>
-        <h3>Editar Usuario</h3>
-    </div>
-    <div class="cuerpo">
-        <div class="user">
-            <h4>Rol: Administrador</h4>
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-        <div class="formulario">
-            <div class="col-1">
-                <div class="telefono">
-                    <p>Número de teléfono</p>
-                    <input type="number" name="numero-telefono">
-                </div>
-                <div class="rol">
-                    <p>Rol: *</p>
-                    <select name="rol" id="rol" class="select">
-                        <option value="" selected disabled>Rol</option>
-                        <option value="regente">Regente</option>
-                        <option value="Administrador">Administrador</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="usuario">
-                    <p>Usuario:</p>
-                    <input type="text" name="usuario">
-                </div>
-                <div class="contrasena">
-                    <p>Contraseña:</p>
-                    <input type="password" name="contrasena">
-                </div>
-            </div>
-        </div>
-        <div class="botones">
-            <a href=""><button>Guardar</button></a>
-            <a href=""><button>Cancelar</button></a>
-        </div>
-    </div>
+    <div class="menu-principal">
+        <nav>
+            <ul>
+                <li><a href="admin_Dashboard.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addUser.html">Agregar usuario</a>
+                        <a href="admin_editUser.html" class="active">Editar usuario</a>
+                        <a href="admin_DeleteUser.html">Eliminar usuario</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de productos</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addProduct.html">Añadir producto</a>
+                        <a href="admin_editProduct.html">Editar producto</a>
+                        <a href="admin_deleteProduct.html">Eliminar producto</a>
+                    </div>
+                </li>
+                <li><a href="admin_movimientos.html">Movimientos Realizados</a></li>
+            </ul>
+        </nav>
+    <h1>Editar Usuario</h1>
 
-    <script src="https://kit.fontawesome.com/9e198b2f7c.js" crossorigin="anonymous">
-    </script>
-</html>
+    <form action="#" method="post">
+        
+        <label for="cant_Product">Número de Teléfono:</label>
+        <input type="text" id="numberPhone" name="numberPhone" required>
+
+        <label for="userUser">Usuario:</label>
+        <input type="text" id="userUser" name="userUser" required>
+
+        <label for="rolUser">Rol:</label>
+        <select id="rolUser" name="rolUser" required>
+            <option value="predeterminado">Seleccione el rol</option>
+            <option value="adminUser">Administrador</option>
+            <option value="regenteUser">Regente</option>
+        </select>
+
+        <label for="passwordUser">Contraseña:</label>
+        <input type="password" id="passwordUser" name="passwordUser" required>
+    
+        <button type="submit" class="send">Enviar</button>
+        <a href="index.html"><button type="submit" class="cancel">Cancelar</button></a>
+    </form>
 </body>
+</html>
