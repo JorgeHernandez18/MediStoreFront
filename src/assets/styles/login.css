@@ -60,8 +60,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .root .botones button {
     display: inline-block;
-    color: white;
-    background-color: rgb(1, 195, 146);
+    color: black;
+    background-color: rgb(62, 213, 208);
     padding: 10px 8px;
     border-radius: 10px;
     font-size: 20px;

@@ -2,7 +2,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 nav {
-    background-color: #333333;
+    background-color: rgb(131, 131, 119);
 }
 h1{
     text-align: center;
@@ -19,13 +19,13 @@ li {
 }
 li a, .dropdown-btn {
     display: inline-block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 li a:hover, .dropdown:hover .dropdown-btn {
-    background-color: blue;
+    background-color: rgb(62, 213, 208);
 }
 .dropdown {
     display: inline-block;
@@ -46,11 +46,11 @@ li a:hover, .dropdown:hover .dropdown-btn {
     text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: yellow;
+    background-color: rgb(62, 213, 208);
 }
 .dropdown:hover .dropdown-content {
     display: block;
 }
 .active {
-    background-color: rebeccapurple;
+    background-color: rgb(61, 201, 66);
 }
