@@ -22,20 +22,20 @@
             <div class="col-1">
                 <div class="nombre">
                     <p>Nombres: *</p>
-                    <input type="text" name="nombres-usuario">
+                    <input type="text" name="nombres-usuario" id="nombre">
                 </div>
                 <div class="tipo-documento">
                     <p>Tipo de documento: *</p>
-                    <select name="documento" id="documento" class="select">
+                    <select name="documento" id="tipo-documento" class="select">
                         <option value="" selected disabled>Tipo de documento</option>
-                        <option value="cc">Cédula de ciudadania</option>
-                        <option value="ci">Cédula de extranjeria</option>
-                        <option value="passport">Pasaporte</option>
+                        <option value="CC">Cédula de ciudadania</option>
+                        <option value="CI">Cédula de extranjeria</option>
+                        <option value="PP">Pasaporte</option>
                     </select>
                 </div>
                 <div class="telefono">
                     <p>Número de teléfono</p>
-                    <input type="number" name="numero-telefono">
+                    <input type="number" name="numero-telefono" id="telefono">
                 </div>
                 <div class="usuario">
                     <p>Usuario:</p>
@@ -53,26 +53,27 @@
             <div class="col-2">
                 <div class="apellido">
                     <p>Apellidos: *</p>
-                    <input type="text" name="apellidos-usuario">
+                    <input type="text" name="apellidos-usuario" id="apellido">
                 </div>
                 <div class="num-documento">
                     <p>Número de documento: *</p>
-                    <input type="number" name="numero-documento">
+                    <input type="number" name="numero-documento" id="num-documento">
                 </div>
                 <div class="email">
                     <p>Email: *</p>
-                    <input type="email" name="email">
+                    <input type="email" name="email" id="email">
                 </div>
                 <div class="contrasena">
                     <p>Contraseña: *</p>
-                    <input type="password" name="contrasena">
+                    <input type="password" name="contrasena" id="clave">
                 </div>
             </div>
         </div>
         <div class="botones">
-            <a href=""><button>Guardar</button></a>
+            <a href=""><button id="agregar_usuario">Guardar</button></a>
             <a href=""><button>Cancelar</button></a>
         </div>
     </div>
-</html>
+    <script src="js/agregar_usuario.js"></script>
 </body>
+</html>
