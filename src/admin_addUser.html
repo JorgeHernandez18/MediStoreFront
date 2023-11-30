@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Usuario</title>
-    <link rel="stylesheet" href="assets/styles/admin/users.css">
+    <title>Añadir usuario</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/admin/admin_styles.css">
 </head>
-
 <body>
-    <div class="encabezado">
-        <h1 style="font-size: 50px;">MediStore</h1>
-        <h3>Agregar Nuevo Usuario</h3>
-    </div>
-    <div class="cuerpo">
-        <div class="user">
-            <h4>Rol: Administrador</h4>
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-        <div class="formulario">
-            <div class="col-1">
-                <div class="nombre">
-                    <p>Nombres: *</p>
-                    <input type="text" name="nombres-usuario">
-                </div>
-                <div class="tipo-documento">
-                    <p>Tipo de documento: *</p>
-                    <select name="documento" id="documento" class="select">
-                        <option value="" selected disabled>Tipo de documento</option>
-                        <option value="cc">Cédula de ciudadania</option>
-                        <option value="ci">Cédula de extranjeria</option>
-                        <option value="passport">Pasaporte</option>
-                    </select>
-                </div>
-                <div class="telefono">
-                    <p>Número de teléfono</p>
-                    <input type="number" name="numero-telefono">
-                </div>
-                <div class="usuario">
-                    <p>Usuario:</p>
-                    <input type="text" name="usuario">
-                </div>
-                <div class="rol">
-                    <p>Rol: *</p>
-                    <select name="rol" id="rol" class="select">
-                        <option value="" selected disabled>Rol</option>
-                        <option value="regente">Regente</option>
-                        <option value="Administrador">Administrador</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="apellido">
-                    <p>Apellidos: *</p>
-                    <input type="text" name="apellidos-usuario">
-                </div>
-                <div class="num-documento">
-                    <p>Número de documento: *</p>
-                    <input type="number" name="numero-documento">
-                </div>
-                <div class="email">
-                    <p>Email: *</p>
-                    <input type="email" name="email">
-                </div>
-                <div class="contrasena">
-                    <p>Contraseña: *</p>
-                    <input type="password" name="contrasena">
-                </div>
-            </div>
-        </div>
-        <div class="botones">
-            <a href=""><button>Guardar</button></a>
-            <a href=""><button>Cancelar</button></a>
-        </div>
-    </div>
-</html>
+    <div class="menu-principal">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addUser.html" class="active">Agregar usuario</a>
+                        <a href="admin_editUser.html">Editar usuario</a>
+                        <a href="#">Eliminar usuario</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de productos</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addProduct.html">Añadir producto</a>
+                        <a href="admin_editProduct.html">Editar producto</a>
+                        <a href="admin_deleteProduct.html">Eliminar producto</a>
+                    </div>
+                </li>
+                <li><a href="admin_movimientos.html">Movimientos Realizados</a></li>
+            </ul>
+        </nav>
+    <h1>Añadir Nuevo Usuario</h1>
+
+    <form action="#" method="post">
+        <label for="nameUser">Nombres: </label>
+        <input type="text" id="nameUser" name="nameUser" required>
+    
+        <label for="lastnameUser">Apellidos:</label>
+        <input type="text" id="lastnameUser" name="lastnameUser" required>
+
+        <label for="tipoDocumento">Tipo de Documento:</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+            <option value="predeterminado">Seleccione el tipo de documento</option>
+            <option value="cedulaCiudadania">Cédula de Ciudadanía</option>
+            <option value="pasaporte">Pasaporte</option>
+            <option value="cedulaExtranjería">Cédula de Extranjería</option>  
+        </select>
+    
+        <label for="numberDocument">Número de Documento:</label>
+        <input type="text" id="numberDocument" name="numberDocument" required>
+
+        <label for="cant_Product">Número de Teléfono:</label>
+        <input type="text" id="numberPhone" name="numberPhone" required>
+
+        <label for="emailUser">Email:</label>
+        <input type="email" id="emailUser" name="emailUser" required>
+
+        <label for="userUser">Usuario:</label>
+        <input type="text" id="userUser" name="userUser" required>
+
+        <label for="rolUser">Rol:</label>
+        <select id="rolUser" name="rolUser" required>
+            <option value="predeterminado">Seleccione el rol</option>
+            <option value="adminUser">Administrador</option>
+            <option value="regenteUser">Regente</option>
+        </select>
+
+        <label for="passwordUser">Contraseña:</label>
+        <input type="password" id="passwordUser" name="passwordUser" required>
+    
+        <button type="submit" class="send">Enviar</button>
+        <a href="index.html"><button type="submit" class="cancel">Cancelar</button></a>
+    </form>
 </body>
+</html>
