@@ -1,4 +1,4 @@
-const backendURL = "http://localhost:8095/";
+const backendURL = "https://164.92.95.34:8095/";
 
 document.addEventListener("DOMContentLoaded", function () {
     const btnAgregar = document.getElementById("Agregar");
