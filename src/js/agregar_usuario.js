@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             body: JSON.stringify(datos) // Convertir datos a formato JSON
         })
-        .then(response => response.json())
+        .then(response => console.log("Respuesta del servidor: ", response.text()))
         .then(data => {
             // Aquí puedes procesar la respuesta del servidor
             console.log("Respuesta del servidor: ", data);
