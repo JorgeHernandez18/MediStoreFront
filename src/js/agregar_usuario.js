@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const rol = document.getElementById("rolUser").value;
 
         const datos = {
-            nombre: string,
-            apellido: string,
-            tipodoc: string,
-            numerodoc: string,
-            telefono: string,
-            correo: string,
-            clave: string,
-            rol: string
+            nombre: nombre,
+            apellido: apellido,
+            tipodoc: tipodoc,
+            numerodoc: numerodoc,
+            telefono: telefono,
+            correo: correo,
+            clave: clave,
+            rol: rol
         };
 
         fetch(backendURL + "usuario/api/usuario", {
