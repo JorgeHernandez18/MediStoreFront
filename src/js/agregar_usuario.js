@@ -51,5 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error en la solicitud Fetch: " + error);
         });
     });
-
 });
+
+document.getElementById("cancelar").addEventListener("click", ()=>{
+    window.location.href = "index.html";
+})
