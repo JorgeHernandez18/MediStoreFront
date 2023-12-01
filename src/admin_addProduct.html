@@ -61,8 +61,21 @@
         <label>Marca:</label>
         <input type="text" id="marca" name="price_Product" required>
 
-        <label>Disponible:</label>
-        <input type="text" id="disponible" name="price_Product" required>
+        <fieldset>
+            <legend>¿Esta disponible?</legend>
+            <div class="radio-content">
+            <div class="radio-interno">
+            <input type="radio" id="contactChoice1" class="radio" value="true"
+                checked />
+            <label for="contactChoice1">Si</label>
+            </div>
+
+            <div class="radio-interno">
+            <input type="radio" id="contactChoice2" class="radio" value="false" />
+            <label for="contactChoice2">No</label>
+            </div>
+            </div>
+        </fieldset>
 
         <button type="submit" class="send" id="Crear_Producto">Enviar</button>
         <a href="dashboard.html" class="cancel">Cancelar</a>
