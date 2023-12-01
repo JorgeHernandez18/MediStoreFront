@@ -32,7 +32,7 @@
         </nav>
     <h1>Añadir Nuevo Usuario</h1>
 
-    <form action="#" method="post">
+    <form>
         <label for="nameUser">Nombres: </label>
         <input type="text" id="nameUser" name="nameUser" required>
     
@@ -41,10 +41,10 @@
 
         <label for="tipoDocumento">Tipo de Documento:</label>
         <select id="tipoDocumento" name="tipoDocumento" required>
-            <option value="predeterminado">Seleccione el tipo de documento</option>
-            <option value="cedulaCiudadania">Cédula de Ciudadanía</option>
+            <option>Seleccione el tipo de documento</option>
+            <option value="cedula">Cédula de Ciudadanía</option>
             <option value="pasaporte">Pasaporte</option>
-            <option value="cedulaExtranjería">Cédula de Extranjería</option>  
+            <option value="cedulaExtranjeria">Cédula de Extranjería</option>  
         </select>
     
         <label for="numberDocument">Número de Documento:</label>
@@ -69,8 +69,8 @@
         <label for="passwordUser">Contraseña:</label>
         <input type="password" id="passwordUser" name="passwordUser" required>
     
-        <button type="submit" class="send">Enviar</button>
-        <a href="index.html"><button type="submit" class="cancel">Cancelar</button></a>
+        <button type="submit" class="send" id="Agregar">Enviar</button>
+        <a href="src/index.html"><button type="submit" class="cancel">Cancelar</button></a>
     </form>
 </body>
 </html>
