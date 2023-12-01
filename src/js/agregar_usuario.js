@@ -33,18 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             body: JSON.stringify(datos) // Convertir datos a formato JSON
         })
-        .then(response => console.log("Respuesta del servidor: ", response.text()))
+        .then(response => console.log("Respuesta del servidor response: ", response.text()))
         .then(data => {
+
+            document.getElementById("formulario_agregarU").reset();
+            alert("Usuario creado con exito");
             // Aquí puedes procesar la respuesta del servidor
-            console.log("Respuesta del servidor: ", data);
-            /*if (data === true) {
-                console.log("Respuesta del backend:", data);
-                // Las credenciales son válidas, redirige al usuario a la página principal.
-                window.location.href = "../html/dashboard.html";
-            } else {
-                // Las credenciales son inválidas, muestra un mensaje de error.
-                alert("Credenciales incorrectas. Inténtalo de nuevo.");
-            }*/
+            console.log("Respuesta del servidor data: ", data);
         })
         .catch(error => {
             // Manejo de errores, puedes personalizar este bloque según tus necesidades.
@@ -53,6 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById("cancelar").addEventListener("click", ()=>{
-    window.location.href = "index.html";
-})

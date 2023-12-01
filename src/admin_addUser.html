@@ -32,7 +32,7 @@
         </nav>
     <h1>Añadir Nuevo Usuario</h1>
 
-    <form>
+    <form id="formulario_agregarU">
         <label for="nameUser">Nombres: </label>
         <input type="text" id="nameUser" name="nameUser" required>
     
@@ -61,16 +61,16 @@
 
         <label for="rolUser">Rol:</label>
         <select id="rolUser" name="rolUser" required>
-            <option value="predeterminado">Seleccione el rol</option>
-            <option value="adminUser">Administrador</option>
-            <option value="regenteUser">Regente</option>
+            <option>Seleccione el rol</option>
+            <option value="administrador">Administrador</option>
+            <option value="regente">Regente</option>
         </select>
 
         <label for="passwordUser">Contraseña:</label>
         <input type="password" id="passwordUser" name="passwordUser" required>
     
         <button type="submit" class="send" id="Agregar">Enviar</button>
-        <a href="src/index.html"><button id="cancelar" type="submit" class="cancel">Cancelar</button></a>
+        <a href="dashboard.html" type="button" class="cancel">Cancelar</a>
     </form>
 
     <script src="js/agregar_usuario.js"></script>

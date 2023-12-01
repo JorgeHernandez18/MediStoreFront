@@ -32,9 +32,8 @@
         </nav>
     <h1>Añadir Nuevo Producto</h1>
 
-    <form action="#" method="post">
-        <label for="id_Product">Id Producto:</label>
-        <input type="text" id="id_Product" name="Id_Product" required>
+    <form id="formulario_agregarP">
+        
     
         <label for="nom_Comercial">Nombre Comercial:</label>
         <input type="text" id="nom_Comercial" name="nom_Comercial" required>
@@ -53,9 +52,21 @@
 
         <label for="price_Product">Precio:</label>
         <input type="text" id="price_Product" name="price_Product" required>
-    
-        <button type="submit" class="send">Enviar</button>
-        <a href="index.html"><button type="submit" class="cancel">Cancelar</button></a>
+
+        <label for="price_Product">Formula:</label>
+        <input type="text" id="formula" name="price_Product" required>
+
+        <label for="price_Product">Dosis:</label>
+        <input type="text" id="dosis" name="price_Product" required>
+        
+        <label for="price_Product">Marca:</label>
+        <input type="text" id="marca" name="price_Product" required>
+
+        <label for="price_Product">Disponible:</label>
+        <input type="text" id="disponible" name="price_Product" required>
+
+        <button type="submit" class="send" id="Crear_Producto">Enviar</button>
+        <a href="dashboard.html" class="cancel">Cancelar</a>
     </form>
 </body>
 </html>
