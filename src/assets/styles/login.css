@@ -30,16 +30,20 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 p {
-    font-size: 25px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 input[type=text], input[type=password] {
+    width: 92%;
     border: 1px solid #727272;
     border-radius: 4px;
-    padding: 10px 50px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .select {
     display:block;
-    padding: 10px 80px;
+    padding: 10px 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
