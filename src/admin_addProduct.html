@@ -52,33 +52,24 @@
         <label>Precio:</label>
         <input type="text" id="price_Product" name="price_Product" required>
 
-        <label>Formula:</label>
-        <input type="text" id="formula" name="price_Product" required>
+        <label>Fórmula:</label>
+        <input type="text" id="formula" name="formula" required>
 
         <label>Dosis:</label>
-        <input type="text" id="dosis" name="price_Product" required>
+        <input type="text" id="dosis" name="dosis" required>
         
-        <label>Marca:</label>
-        <input type="text" id="marca" name="price_Product" required>
+        <label>Laboratorio:</label>
+        <input type="text" id="laboratorioProduct" name="laboratorioProduct" required>
 
-        <fieldset>
-            <legend>¿Esta disponible?</legend>
-            <div class="radio-content">
-            <div class="radio-interno">
-            <input type="radio" id="contactChoice1" class="radio" value="true"
-                checked />
-            <label for="contactChoice1">Si</label>
-            </div>
-
-            <div class="radio-interno">
-            <input type="radio" id="contactChoice2" class="radio" value="false" />
-            <label for="contactChoice2">No</label>
-            </div>
-            </div>
-        </fieldset>
+        <label>¿Está Disponible?</label>
+        <select id="disponibleProduct" name="disponibleProduct" required>
+            <option value="Seleccione una opción">Seleccione una opción</option>
+            <option value="siDispoProduct">Sí</option>
+            <option value="noDispoProduct">No</option>
+        </select>
 
         <button type="submit" class="send" id="Crear_Producto">Enviar</button>
-        <a href="dashboard.html" class="cancel">Cancelar</a>
+        <button type="submit" class="cancel"><a href="dashboard.html">Cancelar</a></button>
     </form>
     <script src="js/agregar_producto.js"></script>
 </body>
