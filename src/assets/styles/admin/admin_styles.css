@@ -1,5 +1,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("../../../../Images/backgroundBody.png");
 }
 nav {
     background-color: rgb(62, 213, 208);
