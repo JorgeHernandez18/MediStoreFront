@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("../../../../Images/backgroundBody.png");
+}
 .root {
     display: flex;
     flex-direction: column;
