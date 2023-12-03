@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    
+$(document).ready(function() {   
     // Obtener los datos JSON
     $.getJSON("https://164.92.95.34:8095/usuario/api/usuarios", function(data) {
       // Rellenar la tabla
@@ -11,11 +10,6 @@ $(document).ready(function() {
         fila.append($("<td>" + item.telefono + "</td>"));
 
         $("#datos").append(fila);
-      });
-
-      
-
-      
+      });      
     });
   });
-
