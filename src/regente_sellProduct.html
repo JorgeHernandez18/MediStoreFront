@@ -4,40 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediStore - Regente</title>
-    <link rel="stylesheet" href="./src/assets/styles/regente/regente_styles.css">
+    <link rel="stylesheet" href="assets/styles/regente/regente_styles.css">
 </head>
 <body>
-    <header>
-        <img src="ruta_del_logotipo.png" alt="Logotipo de MediStore">
-        <nav>
-            <button>
-                Regresar
-            </button>
-            <h2>
-                Realizar venta
-            </h2>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <input type="text" placeholder="Buscar...">
-            <button type="submit">Buscar</button>
-            <button type="submit">Escanear código de barras</button>
-        </section>
-        <section>
-            <div #tabla>
+    <nav>
+        <ul>
+            <li><a href="regente_menu.html">Inicio</a></li>
+            <li><a href="#">Consultar Inventario</a></li>
+            <li><a href="regente_sellProduct.html" class="active">Realizar Venta</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn">Gestión de Productos</a>
+                <div class="dropdown-content">
+                    <a href="#">Ingresar Producto</a>
+                    <a href="#">Solicitar Producto</a>
+                    <a href="#">Reportar Producto</a>
+                    </div>
+            </li>
+            <li>
+                <a href="admin_movimientos.html">Movimientos Realizados</a>
+            </li>
+        </ul>
+    </nav>
 
+    <main>
+        <div class="botonRegresar">
+            <button type="button"><a href="regente_menu.html">
+            <img src="../Images/flecha-izquierda.png" class="imgVolver" alt="Flecha de regresar"></a>
+            </button>
+        </div>
+
+        <section>
+            <h1>Realizar Venta</h1>
+            <input type="text" placeholder="Buscar...">
+            <button type="submit" class="search">Buscar</button>
+            <button type="submit" class="scanerCod">Escanear código de barras</button>
+        </section>
+        <section>
+            <div class="table-container">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre Del Producto</th>
+                        <th>Dosis</th>
+                        <th>Cantidad</th>
+                      </tr>
+                    </thead>
+                    <tbody id="datos">
+                    </tbody>
+                  </table>
             </div>
         </section>
         <section>
             <div>
-                <i class="fas fa-user"></i>
-                <span>Nombre de usuario</span>
-            </div>
-            <div>
-                <button>Modificar</button>
-                <button>Guardar</button>
-                <button>Cancelar</button>
+                <button class="saveVenta"><a href="regente_menu.html">Guardar</a></button>
+                <button class="modVenta">Modificar</button>
+                <button class="cancelVenta"><a href="regente_menu.html">Cancelar</a></button>
             </div>
         </section>
         <section>
