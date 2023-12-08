@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const marca = document.getElementById("marca").value;
         const disponible = document.getElementById("disponible").value;
         const disponibleBody = false;
-        if(disponible === "si"){
+        if(disponible === "true"){
             disponibleBody = true;
         }
 
