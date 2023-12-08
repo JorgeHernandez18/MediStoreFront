@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formula = document.getElementById("formula").value;
         const dosis = document.getElementById("dosis").value;
         const laboratorio = document.getElementById("laboratorioProduct").value;
-        const disponible = document.getElementById("disponible").value;
+        const disponible = document.getElementById("disponibleProduct").value;
         let disponibleBody = false;
         if(disponible === "true"){
             disponibleBody = true;
