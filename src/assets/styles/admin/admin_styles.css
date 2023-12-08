@@ -2,7 +2,6 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url("../../../../Images/backgroundBody.png");
 }
-
 h1{
     text-align: center;
     font-size: 40px;
@@ -20,7 +19,7 @@ li a, .dropdown-btn{
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -123,7 +122,6 @@ th:nth-child(6),td:nth-child(6){
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
 }
 .dropdown-content a{
     color: black;
@@ -141,17 +139,21 @@ th:nth-child(6),td:nth-child(6){
 .active{
     background-color: rgb(61, 201, 66);
 }
-.navbar {
-    background-color: #333;
+.navbar{
+    background-color: #4ff4f4;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
+    border-radius: 5px;
   }
-.navbar-right button {
+.navbar-right button{
     background-color: #d9534f;
     color: #fff;
     border: none;
+    border-radius: 5px;
     padding: 8px 15px;
     cursor: pointer;
-  }
+    margin-top: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
