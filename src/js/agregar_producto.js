@@ -1,7 +1,7 @@
 const backendURL = "https://164.92.95.34:8095/";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const btnCrearP = document.getElementById("Crear_Producto");
+    const btnCrearP = document.getElementById("btnCrearP");
 
     btnCrearP.addEventListener("click", function (event) {
         event.preventDefault(); // Evitar que el formulario se envíe

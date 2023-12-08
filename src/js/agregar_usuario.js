@@ -1,7 +1,7 @@
 const backendURL = "https://164.92.95.34:8095/";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const btnAgregar = document.getElementById("Agregar");
+    const btnAgregar = document.getElementById("btnAgregar");
 
     btnAgregar.addEventListener("click", function (event) {
         event.preventDefault(); // Evitar que el formulario se envíe
