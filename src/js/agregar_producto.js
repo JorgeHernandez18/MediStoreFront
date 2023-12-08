@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             formula: formula,
             dosis: dosis,
             marca: marca,
-            disponibleBody
+            disponible: disponibleBody
         };
 
         fetch(backendURL + "producto/api/producto", {
