@@ -1,3 +1,4 @@
+
 const backendURL = "https://164.92.95.34:8095/";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -13,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const precio = parseInt(document.getElementById("price_Product").value, 10);
         const formula = document.getElementById("formula").value;
         const dosis = document.getElementById("dosis").value;
-        const marca = document.getElementById("marca").value;
+        const laboratorio = document.getElementById("laboratorioProduct").value;
         const disponible = document.getElementById("disponible").value;
-        const disponibleBody = false;
+        let disponibleBody = false;
         if(disponible === "true"){
             disponibleBody = true;
         }
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             precio: precio,
             formula: formula,
             dosis: dosis,
-            marca: marca,
+            marca: laboratorio,
             disponible: disponibleBody
         };
 
