@@ -8,6 +8,10 @@ $(document).ready(function() {
         fila.append($("<td>" + item.nombre + "</td>"));
         fila.append($("<td>" + item.apellido + "</td>"));
         fila.append($("<td>" + item.telefono + "</td>"));
+        fila.append($("<td>" + 
+                '<i class="fas fa-edit"></i> ' + // icono de editar
+                '<i class="fas fa-trash-alt"></i> ' + // icono de eliminar
+            '</td>'));
 
         $("#datos").append(fila);
       });      

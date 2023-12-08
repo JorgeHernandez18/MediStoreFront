@@ -11,6 +11,10 @@ $(document).ready(function() {
         fila.append($("<td>" + item.precio + "</td>"));
         fila.append($("<td>" + item.dosis + "</td>"));
         fila.append($("<td>" + item.disponible+ "</td>"));
+        fila.append($("<td>" + 
+                '<i class="fas fa-edit"></i> ' + // icono de editar
+                '<i class="fas fa-trash-alt"></i> ' + // icono de eliminar
+            '</td>'));
         $("#datos").append(fila);
       });      
     });
