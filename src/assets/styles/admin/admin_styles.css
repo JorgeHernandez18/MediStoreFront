@@ -141,7 +141,7 @@ th:nth-child(6),td:nth-child(6){
 }
 .navbar{
     background-color: #4ff4f4;
-    color: #fff;
+    color: #ffffff;
     padding: 5px;
     display: flex;
     justify-content: space-between;
