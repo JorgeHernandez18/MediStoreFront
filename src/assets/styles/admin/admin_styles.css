@@ -2,9 +2,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url("../../../../Images/backgroundBody.png");
 }
-nav{
-    background-color: rgb(62, 213, 208);
-}
+
 h1{
     text-align: center;
     font-size: 40px;
@@ -143,3 +141,17 @@ th:nth-child(6),td:nth-child(6){
 .active{
     background-color: rgb(61, 201, 66);
 }
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+.navbar-right button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
