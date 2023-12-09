@@ -17,18 +17,18 @@
         <div class="encabezado">
             <h1 style="font-size: 50px;">Bienvenido a MediStore</h1>
         </div>
-        <form action="tu_script_para_procesar_el_login.php" method="POST" class="login">
+        <form id="loginForm" class="login">
             <div class="usuario">
                 <label for="user">Usuario:</label>
-                <input type="text" name="usuario" id="user">
+                <input type="text" name="usuario" id="user" required>
             </div>
             <div class="contrasena">
                 <label for="clave">Contraseña:</label>
-                <input type="password" name="contrasena" id="clave">
+                <input type="password" name="contrasena" id="clave" required>
             </div>
             <div class="rol">
                 <label for="rol">Rol:</label>
-                <select name="rol" id="rol" class="select">
+                <select name="rol" id="rol" class="select" required>
                     <option value="" selected disabled>Rol</option>
                     <option value="regente">Regente</option>
                     <option value="Administrador">Administrador</option>
