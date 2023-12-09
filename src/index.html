@@ -17,17 +17,17 @@
         <div class="encabezado">
             <h1 style="font-size: 50px;">Bienvenido a MediStore</h1>
         </div>
-        <div class="login">
+        <form action="tu_script_para_procesar_el_login.php" method="POST" class="login">
             <div class="usuario">
-                <p>Usuario:</p>
+                <label for="user">Usuario:</label>
                 <input type="text" name="usuario" id="user">
             </div>
             <div class="contrasena">
-                <p>Contraseña:</p>
+                <label for="clave">Contraseña:</label>
                 <input type="password" name="contrasena" id="clave">
             </div>
             <div class="rol">
-                <p>Rol:</p>
+                <label for="rol">Rol:</label>
                 <select name="rol" id="rol" class="select">
                     <option value="" selected disabled>Rol</option>
                     <option value="regente">Regente</option>
@@ -39,11 +39,11 @@
                 <i class="fa-solid fa-user" style="font-size: 25px;"></i>
                 <i class="fa-solid fa-users" style="font-size: 25px;"></i>
             </div>
-        </div>
-        <div class="botones">
-            <a href=""><button id="iniciarSesion">Iniciar sesión</button></a>
-            <a href=""><button>Cancelar</button></a>
-        </div>
+            <div class="botones">
+                <button type="submit" id="iniciarSesion">Iniciar sesión</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
     </div>
 
     <script src="https://kit.fontawesome.com/9e198b2f7c.js" crossorigin="anonymous"></script>
