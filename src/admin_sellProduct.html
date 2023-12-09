@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediStore - Regente</title>
+    <link rel="stylesheet" href="assets/styles/regente/regente_styles.css">
+    <link rel="icon" href="./src/assets/images/logo1.ico">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <ul>
+                <li><a href="dashboard.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addUser.html">Agregar usuario</a>
+                        <a href="table_ConsulUser.html">Listado de Usuarios</a>
+                        </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de productos</a>
+                    <div class="dropdown-content">
+                        <a href="admin_addProduct.html">Añadir producto</a>
+                        <a href="table_ConsulProduct.html">Listado de Productos</a>
+                        <a href="#">Registrar Lote</a>
+                        <a href="#">Inventario</a>
+                        </div>
+                </li>
+                <li>
+                    <a href="admin_movimientos.html">Movimientos Realizados</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Ventas</a>
+                    <div class="dropdown-content">
+                        <a href="admin_sellProduct.html" class="active">Realizar Venta</a>
+                        <a href="#">Listado de Ventas</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="botonRegresar">
+            <button type="button"><a href="regente_menu.html">
+            <img src="../Images/flecha-izquierda.png" class="imgVolver" alt="Flecha de regresar"></a>
+            </button>
+        </div>
+
+        <section>
+            <h1>Realizar Venta</h1>
+            <input type="text" placeholder="Buscar...">
+            <button type="submit" class="search">Buscar</button>
+            <button type="submit" class="scanerCod">Escanear código de barras</button>
+        </section>
+        <section>
+            <div class="table-container">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre Del Producto</th>
+                        <th>Dosis</th>
+                        <th>Cantidad</th>
+                      </tr>
+                    </thead>
+                    <tbody id="datos">
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section>
+            <div>
+                <button class="saveVenta"><a href="regente_menu.html">Guardar</a></button>
+                <button class="modVenta">Modificar</button>
+                <button class="cancelVenta"><a href="regente_menu.html">Cancelar</a></button>
+            </div>
+        </section>
+        <section>
+            <h3>Total de la venta: $<span id="totalVenta">0.00</span></h3>
+        </section>
+    </main>
+</body>
+</html>
