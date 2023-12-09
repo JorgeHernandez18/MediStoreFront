@@ -2,9 +2,6 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url("../../../../Images/backgroundBody.png");
 }
-nav{
-    background-color: rgb(62, 213, 208);
-}
 h1{
     text-align: center;
     font-size: 40px;
@@ -39,9 +36,10 @@ li a, .dropdown-btn {
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: small;
 }
 li a:hover, .dropdown:hover .dropdown-btn {
     background-color: rgb(131, 131, 119);
@@ -114,7 +112,6 @@ th:nth-child(6),td:nth-child(6) {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
 }
 .dropdown-content a {
     color: black;
@@ -124,13 +121,32 @@ th:nth-child(6),td:nth-child(6) {
     text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: rgb(62, 213, 208);
+    background-color: rgb(61, 201, 66);
 }
 .dropdown:hover .dropdown-content {
     display: block;
 }
 .active {
-    background-color: rgb(61, 201, 66);
+    background-color: #4ff4f4;
+}
+.navbar{
+    background-color:rgb(61, 201, 66);
+    color: #ffffff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: flex-start;
+}
+.navbar-right button{
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .botonRegresar{
     position: fixed;

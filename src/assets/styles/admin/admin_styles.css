@@ -22,6 +22,7 @@ li a, .dropdown-btn{
     padding: 10px 10px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: small;
 }
 li a:hover, .dropdown:hover .dropdown-btn{
     background-color: rgb(131, 131, 119);
