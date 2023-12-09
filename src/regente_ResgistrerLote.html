@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Lote</title>
+    <link rel="stylesheet" href="assets/styles/regente/regente_styles.css">
+    <link rel="icon" href="../Images/logo1.ico">
+</head>
+<body>
+    <div class="menu-principal">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <ul>
+                    <li><a href="regente_menu.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Gestión de productos</a>
+                        <div class="dropdown-content">
+                            <a href="regente_ResgistrerLote.html" class="active">Registrar Lote</a>
+                            <a href="table_ConsulLote.html">Inventario</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Ventas</a>
+                        <div class="dropdown-content">
+                            <a href="admin_sellProduct.html">Realizar Venta</a>
+                            <a href="table_ConsulVentas.html">Listado de Ventas</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <button id="logoutBtn">Cerrar Sesión</button>
+            </div>
+        </nav>
+    </div>
+    <h1>Registrar Nuevo Lote</h1>
+
+    <form id="formulario_agregarLote">
+        <label>Número de Lote: </label>
+        <input type="text" id="numLote" name="numLote" required>
+
+        <label>Fecha de Ingreso:</label>
+        <input type="date" id="fecha_Ingreso" name="fecha_Ingreso" required>
+
+        <label>Fecha de Vencimiento:</label>
+        <input type="date" id="fecha_Vencimiento" name="fecha_Vencimiento" required>
+
+        <button type="submit" class="send" id="btnAgregar">Enviar</button>
+        <button type="button" class="cancel" id="btnAgregar"><a href="dashboard.html">Cancelar</a></button>
+    </form>
+
+    <script src="js/agregar_usuario.js"></script>
+</body>
+</html>
