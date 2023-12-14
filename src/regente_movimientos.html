@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimientos - Regente</title>
-    <link rel="stylesheet" href="assets/styles/admin/admin_styles.css">
-    <link rel="icon" href="../Images/logo1.ico">
+    <title>Movimientos</title>
+    <link rel="stylesheet" href="assets/styles/regente/regente_styles.css">
+    <link rel="icon" href="../Images/logo2.ico">
 </head>
 <body>
     <div class="menu-principal">
         <nav class="navbar">
-            <ul>
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
-                    <div class="dropdown-content">
-                        <a href="admin_addUser.html">Agregar usuario</a>
-                        <a href="table_ConsulUser.html">Listado de Usuarios</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de productos</a>
-                    <div class="dropdown-content">
-                        <a href="admin_addProduct.html">Añadir producto</a>
-                        <a href="table_ConsulProduct.html">Listado de Productos</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="regente_movimientos.html" class="active">Movimientos Realizados</a>
-                </li>
-            </ul>
+            <div class="navbar-left">
+                <ul>
+                    <li><a href="regente_dashboard.html" class="active">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Gestión de productos</a>
+                        <div class="dropdown-content">
+                            <a href="admin_table_ConsulProduct.html">Listado de Productos</a>
+                            <a href="#" id="registerLote">Registrar Lote</a>
+                            <a href="admin_table_ConsulLote.html">Inventario</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Ventas</a>
+                        <div class="dropdown-content">
+                            <a href="admin_sellProduct.html">Realizar Venta</a>
+                            <a href="table_ConsulVentas.html">Listado de Ventas</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <button id="logoutBtn">Cerrar Sesión</button>
+            </div>
         </nav>
 
     <h1>MOVIMIENTOS</h1>
@@ -52,5 +55,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/view_User.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>

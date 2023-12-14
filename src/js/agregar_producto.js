@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault(); // Evitar que el formulario se envíe
 
-        const nombreComercial = document.getElementById("nombre-comercial").value;
+        const nombre = document.getElementById("nombre").value;
         const fechaCreacion = document.getElementById("fecha-creacion-prod").value;
         const tipoUnidad = document.getElementById("unidad-prod").value;
         const concentracion = parseInt(document.getElementById("concentracion-prod").value, 10);
         const unidadConcentracion = document.getElementById("unidad-concentracion").value;
         const registroInvima = document.getElementById("registro-invima").value;
         const principioActivo = document.getElementById("principio-activo").value;
+        const nombreComercial = document.getElementById("nombre-comercial").value;
         const presentacionComercial = document.getElementById("presentacion-comercial").value;
 
         // Validar que la fecha seleccionada sea la fecha actual
@@ -31,14 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const datos = {
-            nombreComercial: nombreComercial,
-            fechaCreacion: fechaCreacion,
-            tipoUnidad: tipoUnidad,
+            nombre: nombre,
+            fecha_creacion: fechaCreacion,
+            unidad: tipoUnidad,
             concentracion: concentracion + " " + unidadConcentracion,
-            unidadConcentracion: unidadConcentracion,
-            registroInvima: registroInvima,
-            principioActivo: principioActivo,
-            presentacionComercial: presentacionComercial
+            registro_invima: registroInvima,
+            principio_activo: principioActivo,
+            nombre_comercial: nombreComercial,
+            presentacion_comercial: presentacionComercial
         };
 
         fetch(backendURL + "producto/api/producto", {

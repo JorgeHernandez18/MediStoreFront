@@ -8,23 +8,30 @@
     <link rel="icon" href="./src/assets/images/logo1.ico">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="regente_menu.html">Inicio</a></li>
-            <li><a href="#">Consultar Inventario</a></li>
-            <li><a href="regente_sellProduct.html" class="active">Realizar Venta</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-btn">Gestión de Productos</a>
-                <div class="dropdown-content">
-                    <a href="#">Ingresar Producto</a>
-                    <a href="#">Solicitar Producto</a>
-                    <a href="#">Reportar Producto</a>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <ul>
+                <li><a href="regente_dashboard.html" class="active">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Gestión de productos</a>
+                    <div class="dropdown-content">
+                        <a href="admin_table_ConsulProduct.html">Listado de Productos</a>
+                        <a href="#" id="registerLote">Registrar Lote</a>
+                        <a href="admin_table_ConsulLote.html">Inventario</a>
                     </div>
-            </li>
-            <li>
-                <a href="admin_movimientos.html">Movimientos Realizados</a>
-            </li>
-        </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Ventas</a>
+                    <div class="dropdown-content">
+                        <a href="admin_sellProduct.html">Realizar Venta</a>
+                        <a href="table_ConsulVentas.html">Listado de Ventas</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <button id="logoutBtn">Cerrar Sesión</button>
+        </div>
     </nav>
 
     <main>
@@ -66,5 +73,8 @@
             <h3>Total de la venta: $<span id="totalVenta">0.00</span></h3>
         </section>
     </main>
+    <script src="js/regente_sellProduct.js"></script>
+    <script src="js/regente_lote_a_producto.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>

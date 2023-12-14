@@ -54,12 +54,13 @@
             <thead>
               <tr>
                 <th>Nombre</th>
-                <th>Lote</th>
-                <th>Fecha de Vencimiento</th>
-                <th>Fórmula</th>
-                <th>Precio</th>
-                <th>Dosis</th>
-                <th>Disponible</th>
+                <th>Fecha de creación</th>
+                <th>Unidad</th>
+                <th>Concentración</th>
+                <th>Registro INVIMA</th>
+                <th>Principio activo</th>
+                <th>Nombre comercial</th>
+                <th>Presentación comercial</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -67,8 +68,38 @@
             </tbody>
           </table>
     </div>
+    <div class="editar-formulario" style="display: none;">
+        <h2>Editar Producto</h2>
+        <form id="formularioEdicion">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+    
+            <label for="unidad">Unidad:</label>
+            <input type="text" id="unidad" name="unidad" required><br><br>
+
+            <label for="concentracion">Concentración:</label>
+            <input type="text" id="concentracion" name="concentracion" required><br><br>
+
+            <label for="registro_invima">Registro INVIMA:</label>
+            <input type="text" id="registro_invima" name="registro_invima" required><br><br>
+
+            <label for="principio_activo">Principio Activo:</label>
+            <input type="text" id="principio_activo" name="principio_activo" required><br><br>
+
+            <label for="nombre_comercial">Nombre Comercial:</label>
+            <input type="text" id="nombre_comercial" name="nombre_comercial" required><br><br>
+
+            <label for="presentacion_comercial">Presentación Comercial:</label>
+            <input type="text" id="presentacion_comercial" name="presentacion_comercial" required><br><br>
+
+            <button type="button" class="cancel" id="btnCancelar">Cancelar</button>
+            <button id="guardarEdicion">Guardar Cambios</button>
+        </form>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/view_Product.js"></script>
     <script src="js/admin_lote_a_producto.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>

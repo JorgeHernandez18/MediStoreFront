@@ -14,31 +14,34 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     };
 
     fetch(backendURL + "auth/api/login", {
-        method: "POST", // Método POST para enviar datos
+        method: "POST",
         headers: {
-            "Content-Type": "application/json" // Especificar el tipo de contenido JSON
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify(datos) // Convertir datos a formato JSON
+        body: JSON.stringify(datos)
     })
     .then(response => response.json())
     .then(data => {
-        // Aquí puedes procesar la respuesta del servidor
         if (data === true) {
             console.log("Respuesta del backend:", data);
-            localStorage.setItem('sesion', datos.correo);
-            // Las credenciales son válidas, redirige al usuario a la página principal.
-            if(datos.rol === "administrador"){
+            localStorage.setItem('currentUser', JSON.stringify(datos));
+
+            // Redirigir según el rol
+            if (datos.rol === "administrador") {
                 window.location.href = "dashboard.html";
-            }else if(datos.rol === "regente"){
+            } else if (datos.rol === "regente") {
                 window.location.href = "regente_dashboard.html";
             }
         } else {
-            // Las credenciales son inválidas, muestra un mensaje de error.
             alert("Credenciales incorrectas. Inténtalo de nuevo.");
         }
     })
     .catch(error => {
-        // Manejo de errores, puedes personalizar este bloque según tus necesidades.
         console.error("Error en la solicitud Fetch: " + error);
     });
+});
+
+// Cancelar el envío del formulario
+document.getElementById("cancelBtn").addEventListener("click", function () {
+    window.location.href = "index.html";
 });
