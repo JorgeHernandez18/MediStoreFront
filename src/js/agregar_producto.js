@@ -8,30 +8,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
         event.preventDefault(); // Evitar que el formulario se envíe
 
-        const nombreComercial = document.getElementById("nom_Comercial").value;
-        const lote = document.getElementById("lote_Product").value;
-        const fechaIngreso = document.getElementById("fecha_Ingreso").value;
-        const fechaVencimiento = document.getElementById("fecha_Vencimiento").value;
-        const precio = parseInt(document.getElementById("price_Product").value, 10);
-        const formula = document.getElementById("formula").value;
-        const dosis = document.getElementById("dosis").value;
-        const laboratorio = document.getElementById("laboratorioProduct").value;
-        const disponible = document.getElementById("disponibleProduct").value;
-        let disponibleBody = false;
-        if(disponible === "true"){
-            disponibleBody = true;
+        const nombreComercial = document.getElementById("nombre-comercial").value;
+        const fechaCreacion = document.getElementById("fecha-creacion-prod").value;
+        const tipoUnidad = document.getElementById("unidad-prod").value;
+        const concentracion = parseInt(document.getElementById("concentracion-prod").value, 10);
+        const unidadConcentracion = document.getElementById("unidad-concentracion").value;
+        const registroInvima = document.getElementById("registro-invima").value;
+        const principioActivo = document.getElementById("principio-activo").value;
+        const presentacionComercial = document.getElementById("presentacion-comercial").value;
+
+        // Validar que la fecha seleccionada sea la fecha actual
+        const fechaActual = new Date().toISOString().slice(0, 10);
+        if (fechaCreacion !== fechaActual) {
+            alert("La fecha de creación debe ser la fecha actual.");
+            return; // Detener el envío del formulario
+        }
+
+        // Validar que la concentración sea mayor a 0
+        if (isNaN(concentracion) || concentracion <= 0) {
+            alert("La concentración debe ser un valor numérico mayor a 0.");
+            return; // Detener el envío del formulario
         }
 
         const datos = {
             nombreComercial: nombreComercial,
-            lote: lote,
-            fechaIngreso: fechaIngreso,
-            fechaVencimiento: fechaVencimiento,
-            precio: precio,
-            formula: formula,
-            dosis: dosis,
-            marca: laboratorio,
-            disponible: disponibleBody
+            fechaCreacion: fechaCreacion,
+            tipoUnidad: tipoUnidad,
+            concentracion: concentracion + " " + unidadConcentracion,
+            unidadConcentracion: unidadConcentracion,
+            registroInvima: registroInvima,
+            principioActivo: principioActivo,
+            presentacionComercial: presentacionComercial
         };
 
         fetch(backendURL + "producto/api/producto", {
@@ -41,17 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             body: JSON.stringify(datos) // Convertir datos a formato JSON
         })
-        .then(response => console.log("Respuesta del servidor response: ", response.text()))
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            }
+            throw new Error('Error en la solicitud Fetch');
+        })
         .then(data => {
-
             document.getElementById("formulario_agregarP").reset();
-            alert("Producto creado con exito");
+            alert("Producto creado con éxito");
             // Aquí puedes procesar la respuesta del servidor
             console.log("Respuesta del servidor data: ", data);
         })
         .catch(error => {
             // Manejo de errores, puedes personalizar este bloque según tus necesidades.
-            console.error("Error en la solicitud Fetch: " + error);
+            console.error("Error en la solicitud Fetch: " + error.message);
         });
     });
 });

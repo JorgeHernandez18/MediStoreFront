@@ -10,77 +10,98 @@
 <body>
     <div class="menu-principal">
         <nav class="navbar">
-            <ul>
-                <li><a href="dashboard.html">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de usuarios</a>
-                    <div class="dropdown-content">
-                        <a href="admin_addUser.html">Agregar usuario</a>
-                        <a href="table_ConsulUser.html">Listado de Usuarios</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Gestión de productos</a>
-                    <div class="dropdown-content">
-                        <a href="admin_addProduct.html" class="active">Añadir producto</a>
-                        <a href="table_ConsulProduct.html">Listado de Productos</a>
-                        <a href="admin_RegistrerLote.html">Registrar Lote</a>
-                        <a href="table_ConsulLote.html">Inventario</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="admin_movimientos.html">Movimientos Realizados</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-btn">Ventas</a>
-                    <div class="dropdown-content">
-                        <a href="admin_sellProduct.html">Realizar Venta</a>
-                        <a href="table_ConsulVentas.html">Listado de Ventas</a>
-                    </div>
-                </li>
-            </ul>
+            <div class="navbar-left">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Gestión de usuarios</a>
+                        <div class="dropdown-content">
+                            <a href="admin_addUser.html">Agregar usuario</a>
+                            <a href="admin_table_ConsulUser.html">Listado de Usuarios</a>
+                            </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Gestión de productos</a>
+                        <div class="dropdown-content">
+                            <a href="admin_addProduct.html">Añadir producto</a>
+                            <a href="admin_table_ConsulProduct.html">Listado de Productos</a>
+                            <a href="#" id="registerLote">Registrar Lote</a>
+                            <a href="admin_table_ConsulLote.html">Inventario</a>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="admin_movimientos.html">Movimientos Realizados</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn">Ventas</a>
+                        <div class="dropdown-content">
+                            <a href="admin_sellProduct.html">Realizar Venta</a>
+                            <a href="admin_table_ConsulVentas.html">Listado de Ventas</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <button id="logoutBtn">Cerrar Sesión</button>
+            </div>
         </nav>
     <h1>Añadir Nuevo Producto</h1>
 
     <form id="formulario_agregarP">
-    
-        <label>Nombre Comercial:</label>
-        <input type="text" id="nom_Comercial" name="nom_Comercial" required>
-
-        <label>Lote del Producto:</label>
-        <input type="text" id="lote_Product" name="lote_Product" required>
-    
-        <label>Cantidad:</label>
-        <input type="text" id="cant_Product" name="cant_Product" required>
-    
-        <label>Fecha de Ingreso:</label>
-        <input type="date" id="fecha_Ingreso" name="fecha_Ingreso" required>
-
-        <label>Fecha de Vencimiento:</label>
-        <input type="date" id="fecha_Vencimiento" name="fecha_Vencimiento" required>
-
-        <label>Precio:</label>
-        <input type="text" id="price_Product" name="price_Product" required>
-
-        <label>Fórmula:</label>
-        <input type="text" id="formula" name="formula" required>
-
-        <label>Dosis:</label>
-        <input type="text" id="dosis" name="dosis" required>
+        <label for="nombre_prod">Nombre del Producto</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre del Producto" required>
         
-        <label>Laboratorio:</label>
-        <input type="text" id="laboratorioProduct" name="laboratorioProduct" required>
+        <label for="fecha-creacion-prod">Fecha de creación</label> 
+        <!-- Debe ser la fecha actual, no se puede manipular -->
+        <input type="date" id="fecha-creacion-prod" name="fecha-creacion-prod" required>
 
-        <label>¿Está Disponible?</label>
-        <select id="disponibleProduct" name="disponibleProduct" required>
-            <option value="Seleccione una opción">Seleccione una opción</option>
-            <option value="true">Sí</option>
-            <option value="false">No</option>
+        <label for="unidad-prod">Tipo de unidad</label>
+        <select name="unidad-prod" id="unidad-prod" required>
+            <option selected disabled>Seleccione un tipo de unidad</option>
+            <option value="caja-prod">Caja</option>
+            <option value="sobre-prod">Sobre</option>
+            <option value="tableta-prod">Tableta</option>
+            <option value="jarabe-prod">Jarabe</option>
+            <option value="ampolla-prod">Ampolla</option>
+            <option value="frasco-prod">Frasco</option>
+            <option value="otro-prod">Otro</option>
         </select>
+        
+        <div class="concentracion-producto">
+            <div>
+                <label for="concentracion-prod">Concentración</label>
+                <!-- Validar que la validación sea mayor que cero -->
+                <input type="number" id="concentracion-prod" name="concentracion-prod" placeholder="Concentración" required>
+            </div>
+        
+            <div>
+                <label for="unidad-concentracion">Unidad de concentración</label>
+                <select name="unidad-concentracion" id="unidad-concentracion" required>
+                    <option selected disabled>Seleccione una unidad de concentración</option>
+                    <option value="mg">MG</option>
+                    <option value="g">G</option>
+                    <option value="ml">ML</option>
+                    <option value="l">L</option>
+                </select>
+            </div>
+        </div>
 
+        <label for="invima-prod">Registro INVIMA</label>
+        <input type="text" id="registro-invima" name="registro-invima" placeholder="Registro INVIMA" required>
+
+        <label for="">Principio activo</label>
+        <input type="text" id="principio-activo" name="principio-activo" placeholder="Principio activo" required>
+
+        <label for="">Nombre comercial</label>
+        <input type="text" id="nombre-comercial" name="nombre-comercial" placeholder="Nombre comercial" required>
+
+        <label for="">Presentación comercial</label>
+        <input type="text" id="presentacion-comercial" name="presentacion-comercial" placeholder="Presentación comercial" required>
+        
         <button type="submit" class="send" id="btnCrearP">Enviar</button>
-        <a href="dashboard.html">Cancelar</a>
+        <button type="button" class="cancel" id="btnAgregar"><a href="dashboard.html" bis_skin_checked="1">Cancelar</a></button>
     </form>
     <script src="js/agregar_producto.js"></script>
+    <script src="js/admin_lote_a_producto.js"></script>
 </body>
 </html>

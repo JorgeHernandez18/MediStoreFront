@@ -248,3 +248,11 @@ th:nth-child(6),td:nth-child(6){
     font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.concentracion-producto{
+    display: flex;
+    width: 100%;
+}
+.concentracion-producto div{
+    display: block;
+    width: 50%;
+}
