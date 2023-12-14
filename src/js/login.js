@@ -5,10 +5,12 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
     const correo = document.getElementById("user").value;
     const contrasena = document.getElementById("clave").value;
+    const rol = document.getElementById("rol").value;
 
     const datos = {
         correo: correo,
-        clave: contrasena
+        clave: contrasena,
+        rol: rol
     };
 
     fetch(backendURL + "auth/api/login", {
@@ -25,7 +27,11 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
             console.log("Respuesta del backend:", data);
             localStorage.setItem('sesion', datos.correo);
             // Las credenciales son válidas, redirige al usuario a la página principal.
-            window.location.href = "dashboard.html";
+            if(datos.rol === "administrador"){
+                window.location.href = "dashboard.html";
+            }else if(datos.rol === "regente"){
+                window.location.href = "regente_dashboard.html";
+            }
         } else {
             // Las credenciales son inválidas, muestra un mensaje de error.
             alert("Credenciales incorrectas. Inténtalo de nuevo.");
