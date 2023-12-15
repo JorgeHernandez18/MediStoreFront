@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Productos</title>
+    <title>Consultar lotes</title>
     <link rel="stylesheet" href="assets/styles/regente/regente_styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="icon" href="../Images/logo2.ico">
@@ -38,20 +38,17 @@
         </div>
     </nav>
     <main>
-        <h1>Productos Registrados en el Sistema</h1>
+        <h1>Inventario</h1>
         <div class="table-container">
             <table>
                 <thead>
                   <tr>
-                    <th>Nombre</th>
-                    <th>Fecha de creación</th>
-                    <th>Unidad</th>
-                    <th>Concentración</th>
-                    <th>Registro INVIMA</th>
-                    <th>Principio activo</th>
-                    <th>Nombre comercial</th>
-                    <th>Presentación comercial</th>
-                    <th>Acciones</th>
+                    <th>Nombre Lote</th>
+                    <th>Cantidad</th>
+                    <th>Fecha de vencimiento</th>
+                    <th>Precio de compra unitario</th>
+                    <th>Precio de venta unitario</th>
+                    <th>Referencia producto</th>
                   </tr>
                 </thead>
                 <tbody id="datos">
@@ -59,31 +56,22 @@
               </table>
         </div>
         <div class="editar-formulario" style="display: none;">
-            <h2>Editar Producto</h2>
+            <h2>Editar lote</h2>
             <form id="formularioEdicion">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-        
-                <label for="unidad">Unidad:</label>
-                <input type="text" id="unidad" name="unidad" required><br><br>
-    
-                <label for="concentracion">Concentración:</label>
-                <input type="text" id="concentracion" name="concentracion" required><br><br>
-    
-                <label for="registro_invima">Registro INVIMA:</label>
-                <input type="text" id="registro_invima" name="registro_invima" required><br><br>
-    
-                <label for="principio_activo">Principio Activo:</label>
-                <input type="text" id="principio_activo" name="principio_activo" required><br><br>
-    
-                <label for="nombre_comercial">Nombre Comercial:</label>
-                <input type="text" id="nombre_comercial" name="nombre_comercial" required><br><br>
-    
-                <label for="presentacion_comercial">Presentación Comercial:</label>
-                <input type="text" id="presentacion_comercial" name="presentacion_comercial" required><br><br>
-    
-                <button type="button" class="cancel" id="btnCancelar">Cancelar</button>
-                <button id="guardarEdicion">Guardar Cambios</button>
+                <label for="nombre-lote">Nombre Lote</label>
+                <input type="text" name="nombre-lote" id="nombre-lote" required>
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad" id="cantidad" required>
+
+                <label for="fecha-vencimiento">Fecha de vencimiento</label>
+                <input type="date" name="fecha-vencimiento" id="fecha-vencimiento" required>
+
+                <label for="precio-compra">Precio de compra unitario</label>
+                <input type="number" name="precio-compra" id="precio-compra" required>
+
+                <label for="precio-venta">Precio de venta unitario</label>
+                <input type="number" name="precio-venta" id="precio-venta" required>
             </form>
         </div>
     </main>
@@ -91,6 +79,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/regente_lote_a_producto.js"></script>
     <script src="js/logout.js"></script>
-    <script src="js/view_Product.js"></script>
+    <script src="js/view_Lote.js"></script>
 </body>
 </html>

@@ -47,23 +47,68 @@
             </div>
         </nav>
     </div>
-    <h1>Listado de Usuarios Registrados en el Sistema</h1>
+    <main>
+        <h1>Listado de Usuarios Registrados en el Sistema</h1>
 
-    <div class="table-container">
-        <table>
-            <thead>
-              <tr>
-                <th>Rol</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Número de teléfono</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody id="datos">
-            </tbody>
-          </table>
-    </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>Rol</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Tipo de documento</th>
+                    <th>Número de documento</th>
+                    <th>Número de teléfono</th>
+                    <th>Correo electrónico</th>
+                    <th>Contraseña</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="datos">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="editar-formulario" style="display: none;">
+            <h2>Editar Usuario</h2>
+            <form id="formularioEdicion">
+                <label for="rol">Rol:</label>
+                <select name="rol" id="rol" required>
+                    <option selected disabled>Seleccione</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="regente">Regente</option>
+                </select>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="apellidos">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="">Tipo doc</label>
+                <select name="tipo_doc" id="tipo_doc" required>
+                    <option selected disabled>Seleccione</option>
+                    <option value="CC">CC</option>
+                    <option value="TI">TI</option>
+                </select>
+
+                <label for="numero_doc">Número de documento:</label>
+                <input type="text" id="numero_doc" name="numero_doc" required>
+
+                <label for="telefono">Número de teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <input type="submit" value="Editar">
+            </form>
+        </div>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/view_User.js"></script>
     <script src="js/admin_lote_a_producto.js"></script>
